@@ -73,3 +73,11 @@ Just posting some lemonbar links as I am highly interested in taking a minimal a
 - [https://bios-blog.com/lemonbar.html](https://bios-blog.com/lemonbar.html)
 - [https://telegra.ph/Ricing-your-nix-desktop-epI-01-18](https://telegra.ph/Ricing-your-nix-desktop-epI-01-18)
 - [http://blog.z3bra.org/2014/04/meeting-at-the-bar.html](http://blog.z3bra.org/2014/04/meeting-at-the-bar.html)
+
+Also, there are things I will want to remember to document in this repo:
+- Any additional programs that are referenced in my scripts or configs
+- How I choose to theme programs that are not directly themed by these configs including
+  - any GTK / QT theming
+- Profile specific files like
+  - .bashrc
+  - .Xresources

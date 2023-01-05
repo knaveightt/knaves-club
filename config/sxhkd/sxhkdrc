@@ -1,0 +1,214 @@
+#############################
+# Knave's CLUB Hotkeys      #
+#############################
+
+# General Notes:
+# xev - can be used to get keysym names
+
+################################
+# Programs/Foundational Hotkeys#
+################################
+
+# Launch Logout/Shutdown Script
+# super + Escape
+#	<launch>	
+
+# Launch Terminal
+super + Return
+	st -z 24
+
+# q - Kill Node (close window)
+# Q - <reserved for volume control
+super + q
+	bspc node -k
+# super + shift + q
+#	<reserved>
+
+# w - run window chooser script
+# W - launch GUI web browser
+#super + w
+#	<reserved>
+super + shift + w
+	firefox
+
+# e - run home folder chooser script
+# E - launch GUI file browser
+#super + e
+#	<reserved>
+super + shift + e
+	thunar
+
+# r - run command
+# R - launch GUI IRC Client
+#super + r
+#	<reserved>
+super + shift + r
+	kvirc
+
+# t - run neovim
+# T - launch GUI mail client
+super + t
+	st -z 22 -e nvim
+#super + shift + t
+#	<reserved>
+
+# a - run application launcher
+# A - run autoconfigured application sets
+#super + a
+#	<reserved>
+#super + shift + a
+#	<reserved>
+
+# s - run scratchpad 1
+# S - run scratchpad 2
+#super + s
+#	<reserved>
+#super + shift + S
+#	<reserved>
+
+# d - cycle next tiling node/window
+# D - toggle dynamic tiling mode between tiled/monacle
+# ctrl+D - change tiling mode back to standard tiled
+super + d
+	bspc desktop -l next
+super + shift + d
+	bspc node -f next.local.!hidden.window
+super + ctrl + d
+	bspc node -f prev.local.!hidden.window
+
+# f - toggle fullscreen window
+# F - toggle floating window
+super + f
+	bspc node -t \~fullscreen
+super + shift + F
+	bspc node -t \~floating
+
+# z - make sxhkd reload its configuration files:
+# Z - lock screen
+super + z
+	pkill -USR1 -x sxhkd
+# super + z
+# 	<reserved>
+# quit/restart bspwm
+#super + alt + {q,r}
+#	bspc {quit,wm -r}
+
+# x - run process killer
+# X - run xkill
+#super + x
+#	<reserved>
+#super + shift + x
+#	<reserved>
+
+# c - run emoji picker script
+# C - run config file editor script
+#super + c
+#	<reserved>
+#super + shift + c
+#	<reserved>
+
+# v - run clipboard viewer
+# V - clear clipboard
+#super + v
+#	<reserved>
+#super + shift + v
+#	<reserved>
+
+# b - run bookmarks script
+# B - toggle bar visibility
+#super + b
+#	<reserved>
+#super + shift + b
+#	<reserved>
+
+
+#############################
+# Swap/Move/Resize Windows  #
+#############################
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+# focus (or move with shift) the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# (ENLARGE) expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# (SHRINK) contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+#############################
+# Preselection Keys         #
+#############################
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+
+#############################
+# Additional Focus Keys     #
+#############################
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+################################
+# Marks, Flgs, and More States #
+################################
+
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# set the window state
+super + {m,shift + m}
+	bspc node -t {tiled,pseudo_tiled}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+
+
