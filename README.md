@@ -47,7 +47,8 @@ go.
 | Bookmark Viewer | club-bookmarks.sh | Not Started |
 
 ## Hotkeys Configured
-Here is a list of hotkeys for this window manager configuration. Each key assumes the `mod` key is also pressed as well.
+Here is a list of hotkeys for this window manager configuration. Each key
+assumes the `mod` key is also pressed as well.
 - `Escape` launch Shutdown script
 - `Enter` launch terminal
 - `q` Quit/Kill window, `Q` *reserved for volume control*
@@ -58,7 +59,7 @@ Here is a list of hotkeys for this window manager configuration. Each key assume
 
 - `a` application launcher,  `A` launch auto-configured set of applications (TBD)
 - `s` launch scratchpad #1, `S` launch scratchpad #2
-- `d` change dynamic window tiling mode #1, `D` change dynamic window tiling mode #2
+- `d` toggle tiling mode (tiled,monacle), `D` or `CTRL+D` cycle to the next or prev node/window
 - `f` toggle fullscreen window, `F` toggle floating window
 
 - `z` launch Reload WM/Key/Bar Menu, `Z` lock screen 
