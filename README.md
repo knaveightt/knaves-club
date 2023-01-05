@@ -61,4 +61,8 @@ Here is a list of hotkeys for this window manager configuration. Each key assume
 - `v` launch Clipboard Viewer, `V` clear clipboard history
 - `b` launch Bookmark Explorer, `B` toggle bar visibility
 
-
+## Miscellaneous
+Just posting some lemonbar links as I am highly interested in taking a minimal approach and using lemonbar + trayer as my status bar.
+- [https://bios-blog.com/lemonbar.html](https://bios-blog.com/lemonbar.html)
+- [https://telegra.ph/Ricing-your-nix-desktop-epI-01-18](https://telegra.ph/Ricing-your-nix-desktop-epI-01-18)
+- [http://blog.z3bra.org/2014/04/meeting-at-the-bar.html](http://blog.z3bra.org/2014/04/meeting-at-the-bar.html)
