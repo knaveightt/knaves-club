@@ -39,6 +39,8 @@ go.
 | Function | Script Name | Configuration Status | 
 | -------- | ----------- | -------------------- | 
 | Shutdown | club-shutdown.sh | Not started |
+| Process Kill | club-proc.sh | Not started |
+| Reload WM/Key/Bar Menu | club-reload.sh | Not started |
 | Configuration File Browser | club-configs.sh | Not started |
 | Emoji Viewer | club-emojis.sh | Not started |
 | Clipboard Viewer | club-clip-view.sh | Not started |
@@ -46,17 +48,21 @@ go.
 
 ## Hotkeys Configured
 Here is a list of hotkeys for this window manager configuration. Each key assumes the `mod` key is also pressed as well.
-- `q` launch neovim, `Q` launch Email Client
+- `Escape` launch Shutdown script
+- `Enter` launch terminal
+- `q` Quit/Kill window, `Q` *reserved for volume control*
 - `w` list windows, `W` launch Web Browser
 - `e` list home folders to explore, `E` launch File Explorer
 - `r` choose a command to run, `R` launch IRC Chat
-- `t` launch terminal, `T` launch htop
+- `t` launch neovim, `T` launch Email Client
+
 - `a` application launcher,  `A` launch auto-configured set of applications (TBD)
 - `s` launch scratchpad #1, `S` launch scratchpad #2
 - `d` change dynamic window tiling mode #1, `D` change dynamic window tiling mode #2
 - `f` toggle fullscreen window, `F` toggle floating window
-- `z` lock screen, `Z` launch Shutdown script
-- `x` kill window, `X` launch xkill
+
+- `z` launch Reload WM/Key/Bar Menu, `Z` lock screen 
+- `x` launch process killer, `X` launch xkill
 - `c` launch Emoji Viewer, `C` launch Configuration File Browser
 - `v` launch Clipboard Viewer, `V` clear clipboard history
 - `b` launch Bookmark Explorer, `B` toggle bar visibility
