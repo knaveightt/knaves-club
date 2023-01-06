@@ -10,6 +10,9 @@ xrdb ~/.Xresources
 # start hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+# start lemonbar
+~/.config/lemonbar/lemonbar_launch.sh &
+
 #############################
 # DESKTOP SETUP             #
 #############################
