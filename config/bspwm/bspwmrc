@@ -37,4 +37,4 @@ bspc config gapless_monocle      true
 #bspc rule -a mplayer2 state=floating
 #bspc rule -a Kupfer.py focus=on
 #bspc rule -a Screenkey manage=off
-bspc rule -a st-kc-run state=floating
+bspc rule -a st-kc-run state=floating center=true rectangle=600x590+0+140

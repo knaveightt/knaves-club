@@ -41,7 +41,7 @@ super + shift + e
 # r - run command
 # R - launch GUI IRC Client
 super + r
-	st -z 24 -c st-kc-run -e kc-run
+	st -z 16 -c st-kc-run -e kc-run
 super + shift + r
 	kvirc
 
@@ -88,11 +88,10 @@ super + shift + F
 super + z
 	pkill -USR1 -x sxhkd
 # super + z
-# 	<reserved>
-# quit/restart bspwm
-#super + alt + {q,r}
-#	bspc {quit,wm -r}
+super + shift + {q,z}
+	bspc {quit,wm -r}
 
+# quit/restart bspwm
 # x - run process killer
 # X - run xkill
 #super + x
