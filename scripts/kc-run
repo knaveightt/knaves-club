@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# kc-run
+#
+# depends on devour 
+# github.com/salman-abedin/devour
+# (which in turn depends on Xlib client headers,
+#    which you can install on void-linux using the
+#    libX11-devel package)
+#
+# Bash script that uses fzf as an executable launcher
+# for my bspwm linux environment on void-linux
+
+# Assuming all executables to be searched for launching are in PATH or /bin directories
+
+Menu="$(ls -a /bin $PATH | uniq -u | fzf --prompt="Choose Which Program You Would Like To Run : " --border=double --margin=5% --color=dark --height 100% --reverse --header="                    PROGRAMS " --info=hidden --header-first)"
+
+exec devour "$Menu"
+

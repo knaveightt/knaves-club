@@ -40,8 +40,8 @@ super + shift + e
 
 # r - run command
 # R - launch GUI IRC Client
-#super + r
-#	<reserved>
+super + r
+	st -z 24 -c st-kc-run -e kc-run
 super + shift + r
 	kvirc
 

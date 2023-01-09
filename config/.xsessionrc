@@ -1,0 +1,6 @@
+# Get environment variables
+# this should also be in ~/.xsessionrc
+if [ -f ~/.profile ]; then
+	. ~/.profile
+fi
+
