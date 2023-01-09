@@ -1,4 +1,4 @@
-# Knave's Club
+# Knave's C.L.U.B.
 > Knaveightt's **C**onfigured **L**inux **U**sing **B**spwm, my dotfiles for
 > what I consider the core of my linux configuration.
 
@@ -17,12 +17,12 @@ go.
 #### Foundational
 | Function | Application | Configuration Status | 
 | -------- | ----------- | -------------------- | 
-| Window manager | bspwm | not started |
-| Hotkey setup | sxhkd | not started |
-| Bar | polybar | not started |
+| Window manager | bspwm | 50% Complete |
+| Hotkey setup | sxhkd | 50% Complete |
+| Bar | lemonbar | 10% Complete |
 | Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) |
 | Terminal | st | [Complete](https://github.com/knaveightt/st-knaveightt-void)
-| Launcher | fzf+scripts | Not Started |
+| Launcher | fzf+scripts | 80% Complete |
 | Notifications | dunst | Not Started |
 | Process Viewer | htop | **Complete** |
 
@@ -37,14 +37,15 @@ go.
 
 #### Utility Scripts
 | Function | Script Name | Configuration Status | 
-| -------- | ----------- | -------------------- | 
-| Shutdown | club-shutdown.sh | Not started |
-| Process Kill | club-proc.sh | Not started |
-| Reload WM/Key/Bar Menu | club-reload.sh | Not started |
-| Configuration File Browser | club-configs.sh | Not started |
-| Emoji Viewer | club-emojis.sh | Not started |
-| Clipboard Viewer | club-clip-view.sh | Not started |
-| Bookmark Viewer | club-bookmarks.sh | Not Started |
+| -------- | ----------- | -------------------- |
+| Run Dialog | kc-run | 90% Complete |
+| Shutdown | kc-shutdown | Not started |
+| Process Kill | kc-proc | Not started |
+| Reload WM/Key/Bar Menu | kc-reload | Not started |
+| Configuration File Browser | kc-configs | Not started |
+| Emoji Viewer | kc-emojis | Not started |
+| Clipboard Viewer | kc-clip-view | Not started |
+| Bookmark Viewer | kc-bookmarks | Not Started |
 
 ## Hotkeys Configured
 Here is a list of hotkeys for this window manager configuration. Each key
@@ -54,7 +55,7 @@ assumes the `mod` key is also pressed as well.
 - `q` Quit/Kill window, `Q` *reserved for volume control*
 - `w` list windows, `W` launch Web Browser
 - `e` list home folders to explore, `E` launch File Explorer
-- `r` choose a command to run, `R` launch IRC Chat
+- `r` choose a command to run using `kc-run`, `R` launch IRC Chat
 - `t` launch neovim, `T` launch Email Client
 
 - `a` application launcher,  `A` launch auto-configured set of applications (TBD)
@@ -70,9 +71,10 @@ assumes the `mod` key is also pressed as well.
 
 ## Miscellaneous
 Just posting some lemonbar links as I am highly interested in taking a minimal approach and using lemonbar + trayer as my status bar.
-- [https://bios-blog.com/lemonbar.html](https://bios-blog.com/lemonbar.html)
-- [https://telegra.ph/Ricing-your-nix-desktop-epI-01-18](https://telegra.ph/Ricing-your-nix-desktop-epI-01-18)
-- [http://blog.z3bra.org/2014/04/meeting-at-the-bar.html](http://blog.z3bra.org/2014/04/meeting-at-the-bar.html)
+- [https://www.linuxjournal.com/content/using-named-pipes-fifos-bash](https://www.linuxjournal.com/content/using-named-pipes-fifos-bash)
+- [https://github.com/simonhughxyz/dotfiles/blob/master/lemonbar/.local/bin/melonbar](https://github.com/simonhughxyz/dotfiles/blob/master/lemonbar/.local/bin/melonbar)
+- [https://github.com/simonhughxyz/dotfiles/blob/master/lemonbar/.local/bin/statusline](https://github.com/simonhughxyz/dotfiles/blob/master/lemonbar/.local/bin/status line)
+- [https://github.com/JLErvin/dotfiles/blob/master/scripts/simplebar](https://github.com/JLErvin/dotfiles/blob/master/scripts/simplebar)
 
 Also, there are things I will want to remember to document in this repo:
 - Any additional programs that are referenced in my scripts or configs
