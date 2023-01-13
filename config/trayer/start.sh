@@ -4,4 +4,6 @@
 sleep 2
 trayer --edge top --align right --SetDockType true --transparent true --SetPartialStrut true --expand true --height 16 --widthtype request --tint 0x000 &
 
-
+# start system tray applications, gradually after each second
+sleep 1
+nm-applet &

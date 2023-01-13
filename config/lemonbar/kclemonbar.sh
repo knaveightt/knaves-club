@@ -43,6 +43,19 @@ dateandtime() {
 	done
 }
 
+trayerspace() {
+	${prefix_dir}/xprop_panel_sub.sh | while read line; do
+		size=$( echo $line | awk '{print $2}' )
+
+		# check to see if we actually got a size value
+		# otherwise the printf command will naturally
+		# return 0
+		size=$( printf '%d' $size 2>/dev/null )
+
+		echo "TRAYSPACE ${size}"
+	done
+}
+
 #############################
 # INITIATE BAR              #
 #############################
@@ -51,6 +64,7 @@ dateandtime() {
 workspaces > "${panel_fifo}" &
 battery > "${panel_fifo}" &
 dateandtime > "${panel_fifo}" &
+trayerspace > "${panel_fifo}" &
 
 # Read named pipe updates and update bar component accordingly
 while read -r line; do
@@ -64,10 +78,13 @@ while read -r line; do
 		BATTERY*)
 			fn_battery="${line#BATTERY }"
 			;;
+		TRAYSPACE*)
+			fn_tspace="${line#TRAYSPACE }"
+			;;
 	esac
 
 	# build the bar
-	echo "%{l}%{B#000}%{F#FFF}${fn_workspaces}%{r}${fn_battery} ${fn_datetime}"
+	echo "%{l}%{B#000}%{F#FFF}${fn_workspaces}%{c}${fn_tspace}%{r}${fn_battery} ${fn_datetime}%{O${fn_tspace}}"
 
 # at the end of the day, make sure the named pipe is providing updates
 # and the updates are piped into lemonbar
