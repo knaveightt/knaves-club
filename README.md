@@ -75,6 +75,7 @@ Just posting some lemonbar links as I am highly interested in taking a minimal a
 - [https://github.com/simonhughxyz/dotfiles/blob/master/lemonbar/.local/bin/melonbar](https://github.com/simonhughxyz/dotfiles/blob/master/lemonbar/.local/bin/melonbar)
 - [https://github.com/simonhughxyz/dotfiles/blob/master/lemonbar/.local/bin/statusline](https://github.com/simonhughxyz/dotfiles/blob/master/lemonbar/.local/bin/statusline)
 - [https://github.com/JLErvin/dotfiles/blob/master/scripts/simplebar](https://github.com/JLErvin/dotfiles/blob/master/scripts/simplebar)
+- [here is a link to some workarounds resizing lemonbar with a dynamic system tray](https://github.com/LemonBoy/bar/issues/182)
 
 Also, there are things I will want to remember to document in this repo:
 - Any additional programs that are referenced in my scripts or configs
