@@ -10,9 +10,6 @@ xrdb ~/.Xresources
 # start hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-# start lemonbar
-~/.config/lemonbar/lemonbar_launch.sh &
-
 #############################
 # DESKTOP SETUP             #
 #############################
@@ -38,3 +35,14 @@ bspc config gapless_monocle      true
 #bspc rule -a Kupfer.py focus=on
 #bspc rule -a Screenkey manage=off
 bspc rule -a st-kc-run state=floating center=true rectangle=600x590+0+140
+
+#############################
+# POST SETUP                #
+#############################
+
+#scripts after desktops/window manager has been initiated
+
+# start lemonbar
+~/.config/lemonbar/kclemonbar.sh &
+
+
