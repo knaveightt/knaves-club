@@ -48,7 +48,5 @@ bspc rule -a st-kc-run state=floating center=true rectangle=600x590+0+140
 # start network manager applet (to system tray)
 nm-applet &
 
-# start system tray
-trayer --edge top --align right --SetDockType true --transparent true --SetPartialStrut true --expand true --height 16 --widthtype request --tint 0x000 &
-
-
+# start system tray launcher script
+~/.config/trayer/start.sh &

@@ -11,6 +11,7 @@
 cp ~/.config/bspwm/bspwmrc config/bspwm/
 cp ~/.config/sxhkd/sxhkdrc config/sxhkd/
 cp ~/.config/lemonbar/kclemonbar.sh config/lemonbar/
+cp ~/.config/trayer/start.sh config/trayer
 
 # Copy over related scripts
 cp ~/.local/bin/kc-run scripts/kc-run
