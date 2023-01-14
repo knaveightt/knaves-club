@@ -10,6 +10,9 @@ xrdb ~/.Xresources
 # start hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+# restore wallpaper
+nitrogen --restore &
+
 #############################
 # DESKTOP SETUP             #
 #############################
