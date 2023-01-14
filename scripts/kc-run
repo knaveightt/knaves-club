@@ -13,7 +13,7 @@
 
 # Assuming all executables to be searched for launching are in PATH or /bin directories
 
-Menu="$(ls -a /bin $PATH | uniq -u | fzf --prompt="Choose Which Program You Would Like To Run : " --border=double --margin=5% --color=dark --height 100% --reverse --info=hidden --header-first)"
+Menu="$(ls -a /bin /usr/bin /usr/local/bin /usr/sbin /usr/local/sbin | uniq -u | fzf --prompt="Choose Which Program You Would Like To Run : " --border=double --margin=5% --color=dark --height 100% --reverse --info=hidden --header-first)"
 
 exec devour "$Menu"
 
