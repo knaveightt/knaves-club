@@ -54,8 +54,8 @@ super + t
 
 # a - run application launcher
 # A - run autoconfigured application sets
-#super + a
-#	<reserved>
+super + a
+	xfce4-appfinder
 #super + shift + a
 #	<reserved>
 

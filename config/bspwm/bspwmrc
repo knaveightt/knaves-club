@@ -38,6 +38,7 @@ bspc config gapless_monocle      true
 #bspc rule -a Kupfer.py focus=on
 #bspc rule -a Screenkey manage=off
 bspc rule -a st-kc-run state=floating center=true rectangle=600x590+0+140
+bspc rule -a Xfce4-appfinder state=floating center=true
 
 #############################
 # POST SETUP                #
