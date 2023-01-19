@@ -210,4 +210,22 @@ super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 
+#############################
+# Keybinds for Chromebook   #
+#############################
+
+F1
+	bspc node -f prev.local.!hidden.window
+F2
+	bspc node -f next.local.!hidden.window
+F3
+    bspc node -f last
+F4
+    bspc node -t \~fullscreen
+F5
+    bspc desktop -l next
+F6
+    xbacklight -dec 10
+F7
+    xbacklight -inc 10
 
