@@ -15,7 +15,7 @@
 
 # Launch Terminal
 super + Return
-	st -z 18
+	kitty
 
 # q - Kill Node (close window)
 # Q - <reserved for volume control
@@ -41,14 +41,14 @@ super + shift + e
 # r - run command
 # R - launch GUI IRC Client
 super + r
-	st -z 16 -c st-kc-run -e kc-run
+    kitty --class st-kc-run --config ~/.config/kitty/kitty-run.conf kc-run
 super + shift + r
 	kvirc
 
 # t - run neovim
 # T - launch GUI mail client
 super + t
-	st -z 22 -e nvim
+	kitty nvim
 #super + shift + t
 #	<reserved>
 
