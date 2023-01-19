@@ -8,8 +8,6 @@
 # Note, run this in the knaves-club project directory
 
 # Copy over related config files
-cp ~/.config/kitty/kitty.conf config/kitty/
-cp ~/.config/kitty/kitty-run.conf config/kitty/
 cp ~/.config/bspwm/bspwmrc config/bspwm/
 cp ~/.config/sxhkd/sxhkdrc config/sxhkd/
 cp ~/.config/lemonbar/kclemonbar.sh config/lemonbar/
