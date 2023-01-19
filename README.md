@@ -21,7 +21,7 @@ go.
 | Hotkey setup | sxhkd | 50% Complete |
 | Bar | lemonbar | 10% Complete |
 | Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) |
-| Terminal | kitty | 80% Complete |
+| Terminal | st | 80% Complete |
 | Launcher | fzf+scripts | 80% Complete |
 | Notifications | dunst | Not Started |
 | Process Viewer | htop | **Complete** |
