@@ -15,7 +15,7 @@
 
 # Launch Terminal
 super + Return
-	st -z 24
+	st -z 18
 
 # q - Kill Node (close window)
 # Q - <reserved for volume control
