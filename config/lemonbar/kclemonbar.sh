@@ -13,8 +13,8 @@
 # lemonbar options
 set_bar_height=28
 set_bar_font="Inconsolata Nerd Font" # Font Awesome 5 Free Solid is also used
-set_bar_font_size=10
-set_bar_underline=3
+set_bar_font_size=11
+set_bar_underline=2
 
 #colors setup, read from .Xresources
 cFG=$( xrdb -query | grep "*.foreground" | cut -f 2 )
@@ -49,6 +49,11 @@ mkfifo "${panel_fifo}"
 #############################
 # BAR MODULES               #
 #############################
+
+# Static Module - this module does not update
+logo() {
+    echo "%{B${cBLACK_L}}%{F${cRED_L}}    %{F${cFG}}%{B${cBG}} "
+}
 
 workspaces() {
 	bspc subscribe report | while read -r line; do
@@ -171,6 +176,9 @@ battery > "${panel_fifo}" &
 dateandtime > "${panel_fifo}" &
 trayerspace > "${panel_fifo}" &
 
+# Initiate the static modules
+fn_logo="$( logo )"
+
 # Read named pipe updates and update bar component accordingly
 while read -r line; do
 	case $line in
@@ -189,8 +197,8 @@ while read -r line; do
 	esac
 
     # build the bar (-e flag to allow echo with escape characters)
-	echo -e "%{l}${fn_workspaces}%{c}${fn_tspace}${cMAGENTA}%{r}${fn_battery} ${fn_datetime}%{O${fn_tspace}}"
+	echo -e "%{T1}%{l}${fn_logo}${fn_workspaces}%{T2}%{c}${fn_tspace}${cMAGENTA}%{r}${fn_battery} ${fn_datetime}%{O${fn_tspace}}"
 
 # at the end of the day, make sure the named pipe is providing updates
 # and the updates are piped into lemonbar
-done < "${panel_fifo}" | lemonbar -g x${set_bar_height} -u ${set_bar_underline} -f "Font Awesome 5 Free Solid-${set_bar_font_size}" -f "${set_bar_font}-${set_bar_font_size}" -B ${cBG} -F ${cFG} | $SHELL
+done < "${panel_fifo}" | lemonbar -g x${set_bar_height} -u ${set_bar_underline} -f "Font Awesome 5 Free Solid-10" -f "${set_bar_font}-${set_bar_font_size}" -B ${cBG} -F ${cFG} | $SHELL
