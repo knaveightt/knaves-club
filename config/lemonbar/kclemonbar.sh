@@ -144,13 +144,32 @@ battery() {
 	done
 }
 
-dateandtime() {
-	while true; do
-		DATETIME=$(date "+%a %d.%b %T")
-		echo "DATETIME $DATETIME"
+calendar() {
+    while true; do
+        # Define the icon
+        sCal="%{T1}"
 
-		sleep 1
-	done
+        # Update the day
+        today=$(date "+%x")
+        sCal="${sCal} %{T2}${today}"
+        echo "CALENDAR $sCal"
+
+        sleep 300 # check each 5 mins
+    done
+}
+
+clock() {
+    while true; do
+        # Define the icon
+        sClock="%{T1}"
+
+        # Update the time
+        right_now=$(date "+%I:%M %p ")
+        sClock="${sClock} %{T2}${right_now}"
+        echo "CLOCK $sClock"
+
+        sleep 30 # only update every 30 seconds
+    done
 }
 
 trayerspace() {
@@ -173,7 +192,8 @@ trayerspace() {
 # Initiate modules and write updates to named pipe
 workspaces > "${panel_fifo}" &
 battery > "${panel_fifo}" &
-dateandtime > "${panel_fifo}" &
+calendar > "${panel_fifo}" &
+clock > "${panel_fifo}" &
 trayerspace > "${panel_fifo}" &
 
 # Initiate the static modules
@@ -185,9 +205,12 @@ while read -r line; do
 		WORKSPACES*)
 			fn_workspaces="${line#WORKSPACES }"
 			;;
-		DATETIME*)
-			fn_datetime="${line#DATETIME }"
-			;;
+        CALENDAR*)
+            fn_calendar="${line#CALENDAR }"
+            ;;
+        CLOCK*)
+            fn_clock="${line#CLOCK }"
+            ;;
 		BATTERY*)
 			fn_battery="${line#BATTERY }"
 			;;
@@ -197,7 +220,7 @@ while read -r line; do
 	esac
 
     # build the bar (-e flag to allow echo with escape characters)
-	echo -e "%{T1}%{l}${fn_logo}${fn_workspaces}%{T2}%{c}${fn_tspace}${cMAGENTA}%{r}${fn_battery} ${fn_datetime}%{O${fn_tspace}}"
+	echo -e "%{T1}%{l}${fn_logo}${fn_workspaces}%{T2}%{c}${fn_tspace}${cMAGENTA}%{r}${fn_battery} ${fn_calendar} ${fn_clock}%{O${fn_tspace}}"
 
 # at the end of the day, make sure the named pipe is providing updates
 # and the updates are piped into lemonbar
