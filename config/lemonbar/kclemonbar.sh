@@ -137,8 +137,23 @@ workspaces() {
 
 battery() {
 	while true; do
-		BAT_PERCENTAGE=$(acpi --battery | cut -d, -f2)
-		echo "BATTERY $BAT_PERCENTAGE"
+		# get the battery charge amount, just the numeric value
+        bat_amount=$(acpi --battery | cut -d, -f2 | sed 's/[ |%]//g')
+        
+        # decide what battery icon to use
+        if [ "$bat_amount" -gt 90 ]; then
+            bat_icon=""
+        elif [ "$bat_amount" -gt 70 ]; then
+            bat_icon=""
+        elif [ "$bat_amount" -gt 40 ]; then
+            bat_icon=""
+        elif [ "$bat_amount" -gt 15 ]; then
+            bat_icon=""
+        else
+            bat_icon=""
+        fi
+
+		echo "BATTERY %{T1}${bat_icon}%{T2}${bat_amount}%"
 
 		sleep 60
 	done
