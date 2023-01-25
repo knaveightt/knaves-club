@@ -45,6 +45,6 @@
 !dmenu.font: Inconsolata Nerd Font:pixelsize=12:antialias=true:autohint=true;
 !dmenu.background: #121212
 !dmenu.foreground: #a2a2a2
-dmenu.selbackground: #555555
-dmenu.selforeground: #9e5e83
+dmenu.selbackground: #3c3b37
+dmenu.selforeground: #CC6666
 
