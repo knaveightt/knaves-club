@@ -41,7 +41,7 @@ super + shift + e
 # r - run command
 # R - launch GUI IRC Client
 super + r
-	st -z 16 -c st-kc-run -e kc-run
+	dmenu_run -i -h 28
 super + shift + r
 	kvirc
 
