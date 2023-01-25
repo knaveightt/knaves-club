@@ -41,6 +41,7 @@ bspc rule -a st-kc-run state=floating center=true rectangle=600x590+0+140
 bspc rule -a Xfce4-appfinder state=floating center=true rectangle=800x600+0+64
 bspc rule -a Firefox desktop='^2' follow=on
 bspc rule -a Thunar desktop='^3' follow=on
+bspc rule -a KVIrc desktop='^4' follow=on
 bspc rule -a st-main desktop='^5' follow=on
 
 #############################
