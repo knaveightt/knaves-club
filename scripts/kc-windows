@@ -1,0 +1,19 @@
+#!/bin/env bash
+
+#note: bspc query -N -d <desktop name> can be used to cycle through 
+#desktop names. In the next iteration of this script, I will cycle
+#through each desktop to get each window name and the desktop name
+#they are a part of.
+
+# get the internal IDs of every open window
+ids=( $( bspc query -N -n .window ) )
+
+# get the window titles for each window, per desktop
+options="$(xtitle "${ids[@]}" | awk '{ print ++i": "$0 }')"
+
+# make sure there are some windows
+[[ -n "$options" ]] || exit
+
+# get a selection, and switch based on user's input
+id_index="$(<<< "$options" dmenu -i -h 28 -p "Open Windows: " -l 10 | cut -d: -f1)"
+bspc node "${ids[$((id_index - 1))]}" -f

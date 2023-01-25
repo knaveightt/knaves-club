@@ -16,6 +16,7 @@ cp ~/.config/trayer/start.sh config/trayer
 
 # Copy over related scripts
 cp ~/.local/bin/kc-run scripts/kc-run
+cp ~/.local/bin/kc-windows scripts/kc-windows
 
 # Misc Related Dot Files
 cp ~/.bashrc config/

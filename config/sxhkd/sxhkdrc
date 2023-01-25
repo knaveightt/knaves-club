@@ -26,8 +26,8 @@ super + q
 
 # w - run window chooser script
 # W - launch GUI web browser
-#super + w
-#	<reserved>
+super + w
+    kc-windows
 super + shift + w
 	firefox
 
