@@ -135,6 +135,20 @@ workspaces() {
 	done
 }
 
+memory() {
+    while true; do
+        # Define the icon
+        sRam="%{T1}"
+
+        # Update the ram usage 
+        memory=$( free -m | grep 'Mem' | awk '{print $3}' )
+        sRam="${sRam} %{T2}${memory}MB"
+        echo "MEMORY $sRam"
+
+        sleep 30 # check each 30 seconds
+    done
+}
+
 battery() {
 	while true; do
 		# get the battery charge amount, just the numeric value
@@ -206,6 +220,7 @@ trayerspace() {
 
 # Initiate modules and write updates to named pipe
 workspaces > "${panel_fifo}" &
+memory > "${panel_fifo}" &
 battery > "${panel_fifo}" &
 calendar > "${panel_fifo}" &
 clock > "${panel_fifo}" &
@@ -220,6 +235,9 @@ while read -r line; do
 		WORKSPACES*)
 			fn_workspaces="${line#WORKSPACES }"
 			;;
+        MEMORY*)
+            fn_memory="${line#MEMORY }"
+            ;;
         CALENDAR*)
             fn_calendar="${line#CALENDAR }"
             ;;
@@ -235,7 +253,7 @@ while read -r line; do
 	esac
 
     # build the bar (-e flag to allow echo with escape characters)
-	echo -e "%{T1}%{l}${fn_logo}${fn_workspaces}%{T2}%{c}${fn_tspace}${cMAGENTA}%{r}${fn_battery} ${fn_calendar} ${fn_clock}%{O${fn_tspace}}"
+	echo -e "%{T1}%{l}${fn_logo}${fn_workspaces}%{T2}%{c}${fn_tspace}${cMAGENTA}%{r}${fn_memory} ${fn_battery} ${fn_calendar} ${fn_clock}%{O${fn_tspace}}"
 
 # at the end of the day, make sure the named pipe is providing updates
 # and the updates are piped into lemonbar
