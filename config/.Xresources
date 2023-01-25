@@ -1,49 +1,50 @@
+! Overall Font Definition
 *.font: Inconsolata Nerd Font:pixelsize=12:antialias=true:autohint=true;
 
-! Numix Darkest colorscheme from terminal.sexy
-! with adjustments to make the background color darker
+! Exported from Terminal.Sexy
+! Modified from collection/hybrid by W0ng
+
 ! special
-*.foreground:   #a2a2a2
-*.background:   #121212
-*.cursorColor:  #a2a2a2
+*.foreground:   #cbc4ba
+*.background:   #211f1d
+*.cursorColor:  #cbc4ba
 
 ! black
-*.color0:       #555555
-*.color8:       #888888
+*.color0:       #282724
+*.color8:       #3c3b37
 
 ! red
-*.color1:       #9c3528
-*.color9:       #d64937
+*.color1:       #a54242
+*.color9:       #cc6666
 
 ! green
-*.color2:       #61bc3b
-*.color10:      #86df5d
+*.color2:       #9f7b2b
+*.color10:      #b5bd68
 
 ! yellow
-*.color3:       #f3b43a
-*.color11:      #fdd75a
+*.color3:       #de935f
+*.color11:      #f0c674
 
 ! blue
-*.color4:       #0d68a8
-*.color12:      #0f75bd
+*.color4:       #5f819d
+*.color12:      #81a2be
 
 ! magenta
-*.color5:       #744560
-*.color13:      #9e5e83
+*.color5:       #85678f
+*.color13:      #b294bb
 
 ! cyan
-*.color6:       #288e9c
-*.color14:      #37c3d6
+*.color6:       #638d87
+*.color14:      #8abeb7
 
 ! white
-*.color7:       #a2a2a2
-*.color15:      #f9f9f9
+*.color7:       #707880
+*.color15:      #c5c8c6
 
 ! dmenu items
-
-dmenu.font: Inconsolata Nerd Font:pixelsize=12:antialias=true:autohint=true;
-dmenu.background: #121212
-dmenu.foreground: #a2a2a2
+!dmenu.font: Inconsolata Nerd Font:pixelsize=12:antialias=true:autohint=true;
+!dmenu.background: #121212
+!dmenu.foreground: #a2a2a2
 dmenu.selbackground: #555555
 dmenu.selforeground: #9e5e83
 

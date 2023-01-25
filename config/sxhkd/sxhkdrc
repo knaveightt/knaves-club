@@ -15,7 +15,7 @@
 
 # Launch Terminal
 super + Return
-	st -z 20
+	st -c st-main -z 20
 
 # q - Kill Node (close window)
 # Q - <reserved for volume control
@@ -41,7 +41,7 @@ super + shift + e
 # r - run command
 # R - launch GUI IRC Client
 super + r
-	dmenu_run -i -h 28
+	dmenu_run -i -h 28 -p "Run Program:"
 super + shift + r
 	kvirc
 
