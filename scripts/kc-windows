@@ -1,19 +1,38 @@
 #!/bin/env bash
 
-#note: bspc query -N -d <desktop name> can be used to cycle through 
-#desktop names. In the next iteration of this script, I will cycle
-#through each desktop to get each window name and the desktop name
-#they are a part of.
+# kc-windows - bash script that uses dmenu to show list of windows
+# for the purpose of selecting a window to switch to.
+#
+# Note: Depends on xtitle
 
-# get the internal IDs of every open window
-ids=( $( bspc query -N -n .window ) )
+# get the list of desktop names
+desktops=( $( bspc query -D --names ) )
+windows=""
+first_window=true
 
-# get the window titles for each window, per desktop
-options="$(xtitle "${ids[@]}" | awk '{ print ++i": "$0 }')"
+# now iterate through each desktop building a list of all window nodes
+for desktop in "${desktops[@]}"
+do
+    nodes=( $(bspc query -N -n .window -d ${desktop} ) )
+    if [[ ! -z "$nodes" ]]; then
+        if [ $first_window = true ]; then
+            first_window=false
+        else 
+            windows="${windows}\n" 
+        fi
+
+        for node in "${nodes[@]}"
+        do
+            windows="${windows}${desktop}: $(xtitle ${node})\t${node}"
+        done
+    fi
+done
 
 # make sure there are some windows
-[[ -n "$options" ]] || exit
+[[ -n "${windows}" ]] || exit
 
 # get a selection, and switch based on user's input
-id_index="$(<<< "$options" dmenu -i -h 28 -p "Open Windows: " -l 10 | cut -d: -f1)"
-bspc node "${ids[$((id_index - 1))]}" -f
+selection=$(echo -e $windows | dmenu -i -h 28 -p "Open Windows: " -l 10)
+
+# move to selected window
+bspc node "${selection}" -f
