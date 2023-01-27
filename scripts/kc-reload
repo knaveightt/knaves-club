@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# kc-reload - gives a quick dmenu command for chosing to 
+# reload bspwm or sxhkd
+#
+
+choice=$( echo -e "sxhkd\nbspwm" | dmenu -i -h 28 -p "What would you like to reload?" )
+
+
+case "$choice" in
+    "sxhkd")
+        pkill -USR1 -x sxhkd
+        ;;
+    "bspwm")
+        bspc wm -r
+        ;;
+    *)
+        ;; # do nothing
+esac
+

@@ -17,6 +17,10 @@ super + Escape
 super + Return
 	st -c st-main -z 20
 
+# Launch reload script to reload BSPWM or SXHKD
+super + ctrl + r
+    kc-reload
+
 # q - Kill Node (close window)
 # Q - <reserved for volume control
 super + q

@@ -52,6 +52,7 @@ Here is a list of hotkeys for this window manager configuration. Each key
 assumes the `mod` key is also pressed as well.
 - `Escape` launch Shutdown script
 - `Enter` launch terminal
+- `CTRL+r` reload WM script (reload BSPWM or reload SXHKD)
 - `q` Quit/Kill window, `Q` *reserved for volume control*
 - `w` list windows, `W` launch Web Browser
 - `e` list home folders to explore, `E` launch File Explorer
@@ -59,11 +60,11 @@ assumes the `mod` key is also pressed as well.
 - `t` launch neovim, `T` launch Email Client
 
 - `a` application launcher,  `A` launch auto-configured set of applications (TBD)
-- `s` launch scratchpad #1, `S` launch scratchpad #2
+- `s` search in Web, `S` sticky current window 
 - `d` toggle tiling mode (tiled,monacle), `D` or `CTRL+D` cycle to the next or prev node/window
 - `f` toggle fullscreen window, `F` toggle floating window
 
-- `z` launch Reload WM/Key/Bar Menu, `Z` lock screen 
+- `z` go back to previous focused window, `Z` lock screen 
 - `x` launch process killer, `X` launch xkill
 - `c` launch Emoji Viewer, `C` launch Configuration File Browser
 - `v` launch Clipboard Viewer, `V` clear clipboard history

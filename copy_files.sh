@@ -18,6 +18,7 @@ cp ~/.config/trayer/start.sh config/trayer
 cp ~/.local/bin/kc-run scripts/kc-run
 cp ~/.local/bin/kc-windows scripts/kc-windows
 cp ~/.local/bin/kc-logout scripts/kc-logout
+cp ~/.local/bin/kc-reload scripts/kc-reload
 
 # Misc Related Dot Files
 cp ~/.bashrc config/
