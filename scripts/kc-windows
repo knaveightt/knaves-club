@@ -9,20 +9,30 @@
 desktops=( $( bspc query -D --names ) )
 windows=""
 first_window=true
+debug=false
+
+# check to see if we are debugging
+if [ ! -z "$1" ]; then
+    if [[ "$1" == "debug" ]]; then
+        debug=true
+    fi
+fi
 
 # now iterate through each desktop building a list of all window nodes
 for desktop in "${desktops[@]}"
 do
+    [[ "$debug" == true ]] && printf "%s\n" "(Debug) Checking windows in $desktop"
     nodes=( $(bspc query -N -n .window -d ${desktop} ) )
-    if [[ ! -z "$nodes" ]]; then
-        if [ $first_window = true ]; then
-            first_window=false
-        else 
-            windows="${windows}\n" 
-        fi
+    [[ "$debug" == true ]] && printf "%s\n" "(Debug) [${desktop}] Pulled nodes ${nodes[@]}"
 
+    if [[ ! -z "$nodes" ]]; then
         for node in "${nodes[@]}"
         do
+            if [ $first_window = true ]; then
+                first_window=false
+            else 
+                windows="${windows}\n" 
+            fi
             windows="${windows}${desktop}: $(xtitle ${node})\t${node}"
         done
     fi
