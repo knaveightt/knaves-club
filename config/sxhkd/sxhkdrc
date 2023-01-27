@@ -10,8 +10,8 @@
 ################################
 
 # Launch Logout/Shutdown Script
-# super + Escape
-#	<launch>	
+super + Escape
+    kc-logout
 
 # Launch Terminal
 super + Return

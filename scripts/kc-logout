@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# kc-logout - gives a quick dmenu command for chosing to 
+# shutdown, logout, or restart
+#
+# Depends on elogind
+
+choice=$( echo -e "Shutdown\nRestart\nLogout" | dmenu -i -h 28 -p "You're leaving? What would you like to do:" )
+
+
+case "$choice" in
+    "Shutdown")
+        loginctl poweroff
+        ;;
+    "Restart")
+        loginctl restart
+        ;;
+    "Logout")
+        loginctl | egrep -v "root|SESSION|listed" | awk '{print $1}' | xargs loginctl terminate-session
+        ;;
+    *)
+        ;; # do nothing
+esac
+
