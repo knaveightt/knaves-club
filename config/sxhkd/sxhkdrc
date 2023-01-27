@@ -98,8 +98,8 @@ super + shift + {q,z}
 # quit/restart bspwm
 # x - run process killer
 # X - run xkill
-#super + x
-#	<reserved>
+super + x
+    st -z 20 -e htop
 #super + shift + x
 #	<reserved>
 
