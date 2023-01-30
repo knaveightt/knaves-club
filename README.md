@@ -9,6 +9,15 @@ list out and maintain the configuration files for the core scripts and
 applications for this setup, and I loosley plan on writing some sort of
 deployment script for a (more) easy installation to other systems as well. 
 
+## Usage Info
+Typically, if I am setting up a workstation from scratch to use this core 
+environment, I will first and foremost make sure I have a working default 
+X instance and working internet to download packages. Once there, I will
+try to setup my build of [st](https://github.com/knaveightt/st-knaveightt-void), 
+and have my working configuration of [neovim](https://github.com/knaveightt/knaveovim) 
+
+*The rest of this section is TBD*
+
 ## Applications
 Here I will list out the core applications that are used in this configuration
 setup. This repo is a work in progress, so I will update the table below as I
@@ -17,11 +26,11 @@ go.
 #### Foundational
 | Function | Application | Configuration Status | 
 | -------- | ----------- | -------------------- | 
-| Window manager | bspwm | 50% Complete |
+| Window manager | bspwm | Complete |
 | Hotkey setup | sxhkd | 50% Complete |
 | Bar | lemonbar | 10% Complete |
 | Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) |
-| Terminal | st | 80% Complete |
+| Terminal | st | [Complete](https://github.com/knaveightt/st-knaveightt-void) |
 | Launcher | dmenu | 80% Complete |
 | Notifications | dunst | Not Started |
 | Process Viewer | htop | **Complete** |
