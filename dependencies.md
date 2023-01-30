@@ -7,12 +7,12 @@
 
 - bspwm
     - sxhkd
+        - lf
     - xrdb
     - nitrogen
     - lemonbar
     - trayer
     - st
-These are items that get special rules in the bspwm config
     - Xfce4-appfinder
     - firefox
     - thunar

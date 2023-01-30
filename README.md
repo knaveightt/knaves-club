@@ -28,27 +28,32 @@ go.
 | -------- | ----------- | -------------------- | 
 | Window manager | bspwm | Complete |
 | Hotkey setup | sxhkd | 50% Complete |
-| Bar | lemonbar | 10% Complete |
 | Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) |
 | Terminal | st | [Complete](https://github.com/knaveightt/st-knaveightt-void) |
 | Launcher | dmenu | 80% Complete |
+| Bar | lemonbar | 10% Complete |
 | Notifications | dunst | Not Started |
 | Process Viewer | htop | **Complete** |
+
+#### Terminal Applications
+| Function | Application | Configuration Status |
+| -------- | ----------- | -------------------- |
+| File Explorer | lf | Not started |
 
 #### GUI Applications (for launching via hotkeys)
 | Function | Application | Configuration Status | 
 | -------- | ----------- | -------------------- | 
-| Email Client | thunderbird | Not started |
 | Web Browser | firefox | **Complete** |
 | File Explorer | thundar | **Complete** |
 | IRC Chat | kvirc | **Complete** |
-| App Killer | xkill | Not Started |
+| Email Client | thunderbird | Not started |
 
 #### Utility Scripts
 | Function | Script Name | Configuration Status | 
 | -------- | ----------- | -------------------- |
-| Run Dialog | kc-run | 90% Complete |
-| Shutdown | kc-shutdown | Not started |
+| Shutdown Script | kc-logout | Complete |
+| Reload Config | kc-reload | Complete |
+| Window Switch | kc-windows | Complete |
 | Process Kill | kc-proc | Not started |
 | Reload WM/Key/Bar Menu | kc-reload | Not started |
 | Configuration File Browser | kc-configs | Not started |
@@ -62,10 +67,11 @@ assumes the `mod` key is also pressed as well.
 - `Escape` launch Shutdown script
 - `Enter` launch terminal
 - `CTRL+r` reload WM script (reload BSPWM or reload SXHKD)
+
 - `q` Quit/Kill window, `Q` *reserved for volume control*
 - `w` list windows, `W` launch Web Browser
 - `e` list home folders to explore, `E` launch File Explorer
-- `r` choose a command to run using `kc-run`, `R` launch IRC Chat
+- `r` dmenu run dialog, `R` launch IRC Chat
 - `t` launch neovim, `T` launch Email Client
 
 - `a` application launcher,  `A` launch auto-configured set of applications (TBD)
