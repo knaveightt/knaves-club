@@ -85,3 +85,7 @@ Also, there are things I will want to remember to document in this repo:
 - Profile specific files like
   - .bashrc
   - .Xresources
+
+## This is where the dependency is for the git prompt in bash:
+- [https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
+- [https://gist.github.com/justintv/168835](https://gist.github.com/justintv/168835)
