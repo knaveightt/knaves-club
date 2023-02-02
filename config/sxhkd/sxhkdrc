@@ -221,4 +221,6 @@ F6
     xbacklight -dec 10
 F7
     xbacklight -inc 10
+XF86Tools
+    dm-tool lock
 
