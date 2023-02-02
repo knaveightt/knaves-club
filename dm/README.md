@@ -30,4 +30,12 @@ need to be performed:
 - `sudo cp --recursive Aether /usr/share/lightdm-webkit/themes/Aether`
 - Edit /etc/lightdm/lightdm-webkit2-greeter.conf and set theme to Aether
 
+## Theme Tweaks
+I added my own avatar by grabbing a png image and placing it in a directory in
+/var, and upating my file under AccountsService to point to the image. This
+must be done by root, and was following the thread found 
+[here](https://github.com/NoiSek/Aether/issues/14).
+- Save the png directly to `/var/lib/AccountsService/icons/`
+- Update the `/var/lib/AccountsService/users/$USERNAME` file:
+    - Add `Icon=/var/lib/AccountsService/icons/$USERNAME.png`
 
