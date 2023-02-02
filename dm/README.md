@@ -8,10 +8,8 @@ I installed the following packages from the (void linux) main repositories.
 - lightdm-gtk3-greeter (I use this to test the display manager is working)
 - lightdm-webkit2-greeter (I will actually use this with a theme)
 
-Since I use the webkit2 greeter, I also choose to use the litarvan theme
-- Go to [github](https://github.com/Litarvan/lightdm-webkit-theme-litarvan/releases)
-  to get the latest tar.gz for the theme
-
+Since I use the webkit2 greeter, I also choose to use the Aether theme
+- Go to [github](https://github.com/NoiSek/Aether) for the details
 
 ## Installation Procedure
 After installing the above packages, I needed to first disable the current 
@@ -26,9 +24,10 @@ configure the greeter to use the desired theme.
 - Update `/etc/lightdm/lightdm.conf` by changing `greeter-session=` to equal 
   lightdm-webkit2-greeter
 
-The theme I use is the litarvan theme. To use this theme, the following steps
+The theme I use is the Aether theme. To use this theme, the following steps
 need to be performed:
-- Unzip the tar.gz file downloaded to /usr/share/lightdm-webkit/themes/litarvan
-- Edit /etc/lightdm/lightdm-webkit2-greeter.conf and set theme to litarvan
+- `git clone git@github.com:NoiSek/Aether.git`
+- `sudo cp --recursive Aether /usr/share/lightdm-webkit/themes/Aether`
+- Edit /etc/lightdm/lightdm-webkit2-greeter.conf and set theme to Aether
 
 
