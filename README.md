@@ -30,7 +30,7 @@ go.
 | Hotkey setup | sxhkd | 50% Complete |
 | Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) |
 | Terminal | st | [Complete](https://github.com/knaveightt/st-knaveightt-void) |
-| Launcher | dmenu | 80% Complete |
+| Launcher | dmenu | [Complete](https://github.com/knaveightt/dmenu-knaveightt-void) |
 | Bar | lemonbar | 10% Complete |
 | Notifications | dunst | Not Started |
 | Process Viewer | htop | **Complete** |
@@ -101,6 +101,6 @@ Also, there are things I will want to remember to document in this repo:
   - .bashrc
   - .Xresources
 
-## This is where the dependency is for the git prompt in bash:
+This is where the dependency is for the git prompt in bash:
 - [https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
 - [https://gist.github.com/justintv/168835](https://gist.github.com/justintv/168835)

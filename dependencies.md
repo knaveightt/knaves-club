@@ -18,3 +18,9 @@
     - thunar
     - KVIrc
 
+#### Dependencies for Scripts
+- elogind
+(kc-logout uses `loginctl`)
+- xtitle
+(kc-windows uses `xtitle`)
+
