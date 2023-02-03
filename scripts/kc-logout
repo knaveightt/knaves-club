@@ -13,7 +13,7 @@ case "$choice" in
         loginctl poweroff
         ;;
     "Restart")
-        loginctl restart
+        loginctl reboot
         ;;
     "Logout")
         loginctl | egrep -v "root|SESSION|listed" | awk '{print $1}' | xargs loginctl terminate-session
