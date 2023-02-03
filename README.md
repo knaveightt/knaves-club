@@ -97,6 +97,11 @@ Also, there are things I will want to remember to document in this repo:
 - Any additional programs that are referenced in my scripts or configs
 - How I choose to theme programs that are not directly themed by these configs including
   - any GTK / QT theming
+  - Special note for QT theming, I found [these steps](https://askubuntu.com/questions/910012/how-can-i-get-qt5-applications-to-use-the-gtk-theme-in-ubuntu-17-04)
+    for making sure QT follows the GTK2 theme. I had to:
+    - install qt5ct and qt5-styleplugins
+    - update `/etc/enviornment` by adding `QT_QPA_PLATFORMTHEME=qt5ct`
+    - Use qt5ct to set the theme to GTK, and lxappearance to set the GTK theme
 - Profile specific files like
   - .bashrc
   - .Xresources
