@@ -39,9 +39,10 @@ cWHITE_L=$( xrdb -query | grep "*.color15" | cut -f 2 )
 
 
 
-# create named pipe
+# create named pipe and event script variable
 prefix_dir="$HOME/.config/lemonbar"
 panel_fifo="$prefix_dir/panel-fifo"
+event_script="$prefix_dir/kclemonbar-clicks.sh"
 
 [ -e "${panel_fifo}" ] && rm "${panel_fifo}"
 mkfifo "${panel_fifo}"
@@ -143,7 +144,7 @@ memory() {
         # Update the ram usage 
         memory=$( free -m | grep 'Mem' | awk '{print $3}' )
         sRam="${sRam} %{T2}${memory}MB"
-        echo "MEMORY $sRam"
+        echo "MEMORY %{A:$event_script showmem:}$sRam%{A}"
 
         sleep 30 # check each 30 seconds
     done
