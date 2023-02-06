@@ -7,7 +7,7 @@
 
 - bspwm
     - sxhkd
-        - lf
+    - lf
     - xrdb
     - nitrogen
     - lemonbar

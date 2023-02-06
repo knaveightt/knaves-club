@@ -31,9 +31,9 @@ go.
 | Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) |
 | Terminal | st | [Complete](https://github.com/knaveightt/st-knaveightt-void) |
 | Launcher | dmenu | [Complete](https://github.com/knaveightt/dmenu-knaveightt-void) |
-| Bar | lemonbar | 10% Complete |
+| Bar | lemonbar | 90% Complete |
 | Notifications | dunst | Not Started |
-| Process Viewer | htop | **Complete** |
+| Process Viewer | htop | Complete |
 
 #### Terminal Applications
 | Function | Application | Configuration Status |
