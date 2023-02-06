@@ -53,7 +53,7 @@ mkfifo "${panel_fifo}"
 
 # Static Module - this module does not update
 logo() {
-    echo "%{B${cBLACK_L}}%{F${cRED_L}}    %{F${cFG}}%{B${cBG}} "
+    echo "%{B${cBLACK_L}}%{F${cYELLOW_L}}      %{F${cFG}}%{B${cBG}}"
 }
 
 workspaces() {
@@ -73,7 +73,7 @@ workspaces() {
         # it should be formatted. It assumes 5 desktops named 
         # I II III IV and V. See man bspc for info on the subscribe
         # report that I am parsing.
-        wspace=""
+        wspace="%{B${cBLACK}} "
         underline=false
         focused=false
         for element in "${desktops_formatted[@]}"
@@ -81,8 +81,8 @@ workspaces() {
             # check if this is the currently focused desktop
             if [[ "${element:0:1}" == "F" || "${element:0:1}" == "O" ]]; then
                 focused=true
-                # update the background for this item
-                wspace="${wspace}%{B${cBLACK}}"
+                # update the background or foreground for this item
+                wspace="${wspace}%{F${cCYAN_L}}"
             fi
 
             # checking if this is a desktop that has active notes
@@ -123,7 +123,7 @@ workspaces() {
 
             # clean up if the element was focused
             if [[ $focused == true ]]; then
-                wspace="${wspace}%{B${cBG}}"
+                wspace="${wspace}%{F${cFG}}"
                 focused=false
             fi
 
@@ -131,6 +131,9 @@ workspaces() {
             wspace="${wspace} "
 
         done
+
+        # clean up the background color of this module
+        wspace="${wspace}%{B${cBG}}"
 
 		echo "WORKSPACES ${wspace}"
 	done
