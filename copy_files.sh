@@ -14,12 +14,15 @@ cp ~/.config/lemonbar/kclemonbar.sh config/lemonbar/
 cp ~/.config/lemonbar/xprop_panel_sub.sh config/lemonbar/
 cp ~/.config/lemonbar/kclemonbar-clicks.sh config/lemonbar/
 cp ~/.config/trayer/start.sh config/trayer
+cp ~/.config/dunst/dunstrc config/dunst/
+cp ~/.config/dunst/notification.png config/dunst/
 
 # Copy over related scripts
 cp ~/.local/bin/kc-run scripts/kc-run
 cp ~/.local/bin/kc-windows scripts/kc-windows
 cp ~/.local/bin/kc-logout scripts/kc-logout
 cp ~/.local/bin/kc-reload scripts/kc-reload
+cp ~/.local/bin/kc-brightness scripts/kc-brightness
 
 # Misc Related Dot Files
 cp ~/.bashrc config/

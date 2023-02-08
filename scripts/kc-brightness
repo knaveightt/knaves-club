@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# kc-reload - change screen brightness
+# This is a wrapper script for xbacklight which uses dunst notifications.
+# It is expecting either the -inc or -dec argument as the first argument,
+# and the value to increment/decrement as the second argument.
+
+# artitrary but unique message tag
+tag="kcbright"
+
+# change the brightness based on the first and second arguments
+xbacklight $1 $2
+
+# get the integer value of the current brightness
+brightness=$( xbacklight -get )
+val=${brightness%.*}
+
+# Show the brightness
+dunstify -a "kc-brightness" -u normal -h string:x-dunst-stack-tag:$tag \
+    -h int:value:"$val" "Adjusted Brightness ${val}%"
+
+
+

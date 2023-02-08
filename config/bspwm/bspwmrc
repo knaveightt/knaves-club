@@ -4,6 +4,10 @@
 # AUTOSTARTS                #
 #############################
 
+# Kill XFCE4 Notifications Daemon (if active) and start dunst
+pkill xfce4-notifyd
+dunst &
+
 # load color scheme for terminal 
 xrdb ~/.Xresources 
 

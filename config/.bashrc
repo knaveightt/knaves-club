@@ -7,6 +7,9 @@
 export PAGER=nvimpager
 
 alias ls='ls --color=auto'
+alias xi='sudo xbps-install'
+alias xf='xbps-query -Rs'
+alias v='nvim'
 
 source ~/Prog/git-prompt/git-prompt.sh
 

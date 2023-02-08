@@ -218,9 +218,9 @@ F4
 F5
     bspc desktop -l next
 F6
-    xbacklight -dec 10
+    kc-brightness -dec 10
 F7
-    xbacklight -inc 10
+    kc-brightness -inc 10
 XF86Tools
     dm-tool lock
 
