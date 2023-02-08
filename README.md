@@ -32,7 +32,7 @@ go.
 | Terminal | st | [Complete](https://github.com/knaveightt/st-knaveightt-void) |
 | Launcher | dmenu | [Complete](https://github.com/knaveightt/dmenu-knaveightt-void) |
 | Bar | lemonbar | Complete |
-| Notifications | dunst | Not Started |
+| Notifications | dunst | 90% Complete |
 
 #### Terminal Applications
 | Function | Application | Configuration Status |
