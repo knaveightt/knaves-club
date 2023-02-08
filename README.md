@@ -31,14 +31,14 @@ go.
 | Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) |
 | Terminal | st | [Complete](https://github.com/knaveightt/st-knaveightt-void) |
 | Launcher | dmenu | [Complete](https://github.com/knaveightt/dmenu-knaveightt-void) |
-| Bar | lemonbar | 90% Complete |
+| Bar | lemonbar | Complete |
 | Notifications | dunst | Not Started |
-| Process Viewer | htop | Complete |
 
 #### Terminal Applications
 | Function | Application | Configuration Status |
 | -------- | ----------- | -------------------- |
 | File Explorer | lf | Not started |
+| Process Viewer | htop | Complete |
 
 #### GUI Applications (for launching via hotkeys)
 | Function | Application | Configuration Status | 
@@ -69,10 +69,10 @@ assumes the `mod` key is also pressed as well.
 - `CTRL+r` reload WM script (reload BSPWM or reload SXHKD)
 
 - `q` Quit/Kill window, `Q` *reserved for volume control*
-- `w` list windows, `W` launch Web Browser
-- `e` list home folders to explore, `E` launch File Explorer
-- `r` dmenu run dialog, `R` launch IRC Chat
-- `t` launch neovim, `T` launch Email Client
+- `w` list windows script, `W` GUI Web Browser (Firefox)
+- `e` terminal file explorer (lf), `E` GUI File Explorer (Thunar)
+- `r` terminal IRC (weechat), `R` GUI IRC (KVIRC)
+- `t` terminal email (neomutt), `T` GUI Email Client (Thunderbird)
 
 - `a` application launcher,  `A` launch auto-configured set of applications (TBD)
 - `s` search in Web, `S` sticky current window 
@@ -80,10 +80,11 @@ assumes the `mod` key is also pressed as well.
 - `f` toggle fullscreen window, `F` toggle floating window
 
 - `z` go back to previous focused window, `Z` lock screen 
-- `x` launch process killer, `X` launch xkill
+- `x` execute command (dmenu_run), `X` launch xkill
 - `c` launch Emoji Viewer, `C` launch Configuration File Browser
 - `v` launch Clipboard Viewer, `V` clear clipboard history
 - `b` launch Bookmark Explorer, `B` toggle bar visibility
+- `n` launch seperate Neovim window
 
 ## Miscellaneous
 Just posting some lemonbar links as I am highly interested in taking a minimal approach and using lemonbar + trayer as my status bar.
