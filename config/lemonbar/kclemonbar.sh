@@ -18,8 +18,6 @@ set_bar_sfont="Symbols Nerd Font" # Font used for symbols (symbols only to
                                   # avoid glyph cut-off issues)
 set_bar_sfont_size=12
 set_bar_underline=2
-set_module_spaces="   "
-
 
 #colors setup, read from .Xresources
 cFG=$( xrdb -query | grep "*.foreground" | cut -f 2 )
@@ -255,9 +253,8 @@ calendar > "${panel_fifo}" &
 clock > "${panel_fifo}" &
 trayerspace > "${panel_fifo}" &
 
-# Initiate the static modules and static vars
+# Initiate the static modules
 fn_logo="$( logo )"
-fn_space="$set_module_spaces"
 
 # Read named pipe updates and update bar component accordingly
 while read -r line; do
@@ -283,7 +280,7 @@ while read -r line; do
 	esac
 
     # build the bar (-e flag to allow echo with escape characters)
-	echo -e "%{T1}%{l}${fn_logo}${fn_workspaces}%{T2}%{r}${fn_memory}${fn_space}${fn_battery}${fn_space}${fn_calendar}${fn_space}${fn_clock}${fn_space}%{O${fn_tspace}}"
+	echo -e "%{T1}%{l}${fn_logo}${fn_workspaces}%{T2}%{r}${fn_memory}   ${fn_battery}   ${fn_calendar}   ${fn_clock}  %{O${fn_tspace}}"
 
 # at the end of the day, make sure the named pipe is providing updates
 # and the updates are piped into lemonbar
