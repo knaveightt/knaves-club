@@ -42,7 +42,7 @@ super + {_,shift +} r
 	{dmenu_run -i -h 28 -p "Run Program:",kvirc}
 
 # t - run neovim | T - launch GUI mail client
-super + t
+super + n
 	st -z 22 -e nvim .
 
 # a - run application launcher
