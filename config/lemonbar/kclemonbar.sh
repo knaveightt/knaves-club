@@ -280,7 +280,7 @@ while read -r line; do
 	esac
 
     # build the bar (-e flag to allow echo with escape characters)
-	echo -e "%{T1}%{l}${fn_logo}${fn_workspaces}%{T2}%{r}${fn_memory}   ${fn_battery}   ${fn_calendar}   ${fn_clock}  %{O${fn_tspace}}"
+	echo -e "%{T1}%{l}${fn_logo}${fn_workspaces}%{T2}%{r}${fn_memory} ${fn_battery}  ${fn_calendar} ${fn_clock} %{O${fn_tspace}}"
 
 # at the end of the day, make sure the named pipe is providing updates
 # and the updates are piped into lemonbar
