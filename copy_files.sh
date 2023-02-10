@@ -16,6 +16,8 @@ cp ~/.config/lemonbar/kclemonbar-clicks.sh config/lemonbar/
 cp ~/.config/trayer/start.sh config/trayer
 cp ~/.config/dunst/dunstrc config/dunst/
 cp ~/.config/dunst/notification.png config/dunst/
+cp ~/.config/lf/lfrc config/lf/
+cp ~/.config/lf/icons config/lf/
 
 # Copy over related scripts
 cp ~/.local/bin/kc-run scripts/kc-run

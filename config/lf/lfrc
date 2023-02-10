@@ -1,0 +1,55 @@
+# Basic Settings
+set ignorecase true
+set icons true # see icons file
+
+# Custom Functions
+cmd mkdir ${{
+    printf "Enter Folder Name: "
+    read ans
+    mkdir $ans
+}}
+
+cmd unarchive ${{
+    case "$f" in
+        *.zip) 
+            unzip "$f" 
+            ;;
+        *.tar.gz)
+            directory=$(basename "$f" .tar.gz)
+            mkdir "$directory"
+            tar -xzvf "$f" -C "$directory" 
+            ;;
+        *.tar.gz2) 
+            tar -xjvf "$f" 
+            ;;
+        *.tar) 
+            directory=$(basename "$f" .tar)
+            mkdir "$directory"
+            tar -xvf "$f" -C "$directory" 
+            ;;
+        *) echo "Unsupported format" ;;
+    esac
+}}
+
+cmd openvim ${{
+    nvim "$f"
+}}
+
+# Map Keys for Custom Functions
+map o mkdir
+map au unarchive
+
+# Additional Default Command Mappings
+map DD delete
+map ZD $nvim . 
+map ZZ openvim
+
+# Directory Movement Mappings
+map g. cd ~/.config
+map gD cd ~/Downloads
+map gd cd ~/Documents
+map gm cd ~/Music
+map gp cd ~/Pictures
+map gR cd ~/Prog
+map gP cd ~/Projects
+map gS cd ~/Shelf
