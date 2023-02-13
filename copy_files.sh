@@ -20,6 +20,8 @@ cp ~/.config/lf/lfrc config/lf/
 cp ~/.config/lf/icons config/lf/
 cp ~/.config/lf/cleaner config/lf/
 cp ~/.config/lf/preview config/lf/
+cp ~/.config/weechat/* config/weechat/
+rm config/weechat/sec* # dont copy any secure information over
 
 # Copy over related scripts
 cp ~/.local/bin/kc-run scripts/kc-run

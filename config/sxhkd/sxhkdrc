@@ -39,7 +39,7 @@ super + {_,shift +} e
 
 # r - run command | R - launch GUI IRC Client
 super + {_,shift +} r
-	{dmenu_run -i -h 28 -p "Run Program:",kvirc}
+	{st -z 20 -e weechat,kvirc}
 
 # t - run neovim | T - launch GUI mail client
 super + n
@@ -88,7 +88,8 @@ super + shift + {q,z}
 # x - run process killer
 # X - run xkill
 super + x
-    st -z 20 -e htop
+    dmenu_run -i -h 28 -p "Execute:"
+
 #super + shift + x
 #	<reserved>
 
