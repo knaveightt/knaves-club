@@ -35,7 +35,7 @@ super + {_,shift +} w
 
 # e - run home folder chooser script | E - launch GUI file browser
 super + {_,shift +} e
-	{st -z 20 -e lf,thunar}
+	{st -z 20 -e lfrun,thunar}
 
 # r - run command | R - launch GUI IRC Client
 super + {_,shift +} r

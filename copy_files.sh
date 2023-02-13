@@ -18,6 +18,8 @@ cp ~/.config/dunst/dunstrc config/dunst/
 cp ~/.config/dunst/notification.png config/dunst/
 cp ~/.config/lf/lfrc config/lf/
 cp ~/.config/lf/icons config/lf/
+cp ~/.config/lf/cleaner config/lf/
+cp ~/.config/lf/preview config/lf/
 
 # Copy over related scripts
 cp ~/.local/bin/kc-run scripts/kc-run
@@ -25,6 +27,7 @@ cp ~/.local/bin/kc-windows scripts/kc-windows
 cp ~/.local/bin/kc-logout scripts/kc-logout
 cp ~/.local/bin/kc-reload scripts/kc-reload
 cp ~/.local/bin/kc-brightness scripts/kc-brightness
+cp ~/.local/bin/lfrun scripts/lfrun
 
 # Misc Related Dot Files
 cp ~/.bashrc config/
