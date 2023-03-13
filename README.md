@@ -24,14 +24,15 @@ setup. This repo is a work in progress, so I will update the table below as I
 go.
 
 #### Foundational
-| Function | Application | Configuration Status | 
-| -------- | ----------- | -------------------- | 
-| Window manager | bspwm | Complete |
-| Hotkey setup | sxhkd | 50% Complete |
-| Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) |
-| Terminal | st | [Complete](https://github.com/knaveightt/st-knaveightt-void) |
-| Launcher | dmenu | [Complete](https://github.com/knaveightt/dmenu-knaveightt-void) |
+| Function | Application | Configuration Status | Hard Dependency | Config Depdendency |
+| -------- | ----------- | -------------------- | --------------- | ------------------ |
+| Window manager | bspwm | Complete | None | {sxhkd,dunst,lemonbar,trayer},xrdb,nitrogen | 
+| Hotkey setup | sxhkd | 50% Complete | None | [kc-logout,kc-windows,kc-brightness],{st,nvim,dmenu},lightdm,firefox,xfce4-appfinder,lfrun,thunar,weechat,kvirc |
+| Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) | None | (see repository) |
+| Terminal | st | [Complete](https://github.com/knaveightt/st-knaveightt-void) | None | (see repository) |
+| Launcher | dmenu | [Complete](https://github.com/knaveightt/dmenu-knaveightt-void) | None | (see repository) |
 | Bar | lemonbar | Complete |
+| System Tray | trayer | Complete |
 | Notifications | dunst | 90% Complete |
 
 #### Terminal Applications
@@ -54,7 +55,6 @@ go.
 | Shutdown Script | kc-logout | Complete |
 | Reload Config | kc-reload | Complete |
 | Window Switch | kc-windows | Complete |
-| Process Kill | kc-proc | Not started |
 | Reload WM/Key/Bar Menu | kc-reload | Not started |
 | Configuration File Browser | kc-configs | Not started |
 | Emoji Viewer | kc-emojis | Not started |

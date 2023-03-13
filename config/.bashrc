@@ -38,3 +38,4 @@ export PS1=\
 "\n \[${FG_GREEN}\]╰ \[${FG_CYAN}\]\$ \[${FMT_RESET}\]"
 
 #PS1='[\u@\h \W]\$ '
+. "$HOME/.cargo/env"
