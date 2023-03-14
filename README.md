@@ -38,6 +38,7 @@ repository. This does mean downloading of some extra packages that are called
 from my bspwm script:
 - dunst
 - nitrogen
+
 I'll comment out and hold off installing the bar and system tray at the moment.
 To make this work however, I'll also bring in my scripts to the .local/bin folder,
 and my bashrc / profile scripts. To make my scripts work, the following are 
@@ -91,13 +92,14 @@ go.
 | Function | Application | Configuration Status |
 | -------- | ----------- | -------------------- |
 | File Explorer | lf | Not started |
+| IRC | weechat | Not Started |
 | Process Viewer | htop | Complete |
 
 #### GUI Applications (for launching via hotkeys)
 | Function | Application | Configuration Status | 
 | -------- | ----------- | -------------------- | 
 | Web Browser | firefox | **Complete** |
-| File Explorer | thundar | **Complete** |
+| File Explorer | pcmanfm | **Complete** |
 | IRC Chat | kvirc | **Complete** |
 | Email Client | thunderbird | Not started |
 
@@ -122,7 +124,7 @@ assumes the `mod` key is also pressed as well.
 
 - `q` Quit/Kill window, `Q` *reserved for volume control*
 - `w` list windows script, `W` GUI Web Browser (Firefox)
-- `e` terminal file explorer (lf), `E` GUI File Explorer (Thunar)
+- `e` terminal file explorer (lf), `E` GUI File Explorer (pcmanfm)
 - `r` terminal IRC (weechat), `R` GUI IRC (KVIRC)
 - `t` terminal email (neomutt), `T` GUI Email Client (Thunderbird)
 
