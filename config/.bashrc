@@ -10,8 +10,9 @@ alias ls='ls --color=auto'
 alias xi='sudo xbps-install'
 alias xf='xbps-query -Rs'
 alias v='nvim'
+alias kc='startx'
 
-source ~/Prog/git-prompt/git-prompt.sh
+# source ~/Prog/git-prompt/git-prompt.sh
 
 # prompt
 FMT_BOLD="\e[1m"
@@ -31,11 +32,11 @@ BG_MAGENTA="\e[45m"
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWCOLORHINTS=1
 
-export PS1=\
-"\n\[${BG_GREEN}\] \[${FG_RED}\] \[${FG_BLACK}\]\u \[${FG_GREEN}${BG_BLUE}\] "\
-"\[${FG_BLACK}\]\w \[${FMT_RESET}${FG_BLUE}\]"\
-'$(__git_ps1 "\[${BG_MAGENTA}\] \[${FG_WHITE}\] %s \[${FMT_RESET}${FG_MAGENTA}\]")'\
-"\n \[${FG_GREEN}\]╰ \[${FG_CYAN}\]\$ \[${FMT_RESET}\]"
+#export PS1=\
+#"\n\[${BG_GREEN}\] \[${FG_RED}\] \[${FG_BLACK}\]\u \[${FG_GREEN}${BG_BLUE}\] "\
+#"\[${FG_BLACK}\]\w \[${FMT_RESET}${FG_BLUE}\]"\
+#'$(__git_ps1 "\[${BG_MAGENTA}\] \[${FG_WHITE}\] %s \[${FMT_RESET}${FG_MAGENTA}\]")'\
+#"\n \[${FG_GREEN}\]╰ \[${FG_CYAN}\]\$ \[${FMT_RESET}\]"
 
-#PS1='[\u@\h \W]\$ '
-. "$HOME/.cargo/env"
+PS1='[\u@\h \W]\$ '
+# . "$HOME/.cargo/env"

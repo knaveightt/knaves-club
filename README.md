@@ -12,11 +12,63 @@ deployment script for a (more) easy installation to other systems as well.
 ## Usage Info
 Typically, if I am setting up a workstation from scratch to use this core 
 environment, I will first and foremost make sure I have a working default 
-X instance and working internet to download packages. Once there, I will
+X instance and working internet to download packages. Number one priority
+is an updated base installation with a working internet connection. Once
+there, I start to setup the vanilla graphical session with X and a WM.
+
+For example on Void Linux, I will ensure I have installed xorg, xinit, 
+bspwm, sxhkd, and xterm. I will confirm the following:
+- I copied over the default config files for bspwm/sxhkd
+- I quickly update sxhkd to call xterm for a temporary terminal solution
+- I copy over the default xinitrc, and edit it to launch bspwm
+- Give startx a go!
+
+Once there, I will typically install and configure git so I can get the
+latest version of this repository to guide me through configuration. Then, I'll 
 try to setup my build of [st](https://github.com/knaveightt/st-knaveightt-void), 
-and have my working configuration of [neovim](https://github.com/knaveightt/knaveovim) 
+and have my working configuration of [neovim](https://github.com/knaveightt/knaveovim).
+After getting those installed and configured, this is typically the first good
+stage to confirm I am comfortable with my colorscheme choices, and edit my
+Xresources file appropriately. Lastly I'll install my build of
+[dmenu](https://github.com/knaveightt/dmenu-knaveightt-void) before setting up
+the rest of my foundational programs.
+
+At this point I now begin to incorporate my bwpwm and sxhkd settings from this
+repository. This does mean downloading of some extra packages that are called
+from my bspwm script:
+- dunst
+- nitrogen
+I'll comment out and hold off installing the bar and system tray at the moment.
+To make this work however, I'll also bring in my scripts to the .local/bin folder,
+and my bashrc / profile scripts. To make my scripts work, the following are 
+required:
+- xbacklight
+- xtitle
+
+Once comfortable with the above, I'll then work on getting my bar setup, as
+well as the system tray. To make my bar work, the following are required:
+- make sure the necessary fonts have been installed
+- acpi
+- htop
+- xprop
+- lemonbar-xft
+- trayer-srg
+- NetworkManager, network-manager-applet (make sure you disable dhcpcd,
+wpa_supplicant and enable NetworkManager service, plus ensure dbus is installed
+and enabled as well as polkit)
+This is also a second good place to make sure I am comfortable with my theme and 
+colors.
+
 
 *The rest of this section is TBD*
+Still to plan for includes:
+- power management (thinking of powerkit/xscreensaver)
+- shutdown/logout/locking management (thinking of powerkit/xscreensaver)
+- any dependencies for the bash prompt / bashrc scripts
+- other general configuration items like
+  - visudo file updates to allow shutdown without password
+  - system logging
+  - anything else in the void linux configuration handbook
 
 ## Applications
 Here I will list out the core applications that are used in this configuration
@@ -28,12 +80,12 @@ go.
 | -------- | ----------- | -------------------- | --------------- | ------------------ |
 | Window manager | bspwm | Complete | None | {sxhkd,dunst,lemonbar,trayer},xrdb,nitrogen | 
 | Hotkey setup | sxhkd | 50% Complete | None | [kc-logout,kc-windows,kc-brightness],{st,nvim,dmenu},lightdm,firefox,xfce4-appfinder,lfrun,thunar,weechat,kvirc |
-| Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) | None | (see repository) |
 | Terminal | st | [Complete](https://github.com/knaveightt/st-knaveightt-void) | None | (see repository) |
+| Editor | neovim | [Complete](https://github.com/knaveightt/knaveovim) | None | (see repository) |
 | Launcher | dmenu | [Complete](https://github.com/knaveightt/dmenu-knaveightt-void) | None | (see repository) |
+| Notifications | dunst | Complete |
 | Bar | lemonbar | Complete |
 | System Tray | trayer | Complete |
-| Notifications | dunst | 90% Complete |
 
 #### Terminal Applications
 | Function | Application | Configuration Status |

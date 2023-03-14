@@ -11,13 +11,13 @@
 #############################
 
 # lemonbar options
-set_bar_height=28
+set_bar_height=20
 set_bar_font="Inconsolata Nerd Font" # Font used for text
-set_bar_font_size=11
+set_bar_font_size=10
 set_bar_sfont="Symbols Nerd Font" # Font used for symbols (symbols only to 
                                   # avoid glyph cut-off issues)
-set_bar_sfont_size=12
-set_bar_underline=2
+set_bar_sfont_size=9
+set_bar_underline=1
 
 #colors setup, read from .Xresources
 cFG=$( xrdb -query | grep "*.foreground" | cut -f 2 )
@@ -54,7 +54,7 @@ mkfifo "${panel_fifo}"
 
 # Static Module - this module does not update
 logo() {
-    echo "%{B${cBLACK_L}}%{F${cGREEN_L}}    %{F${cFG}}%{B${cBG}}"
+    echo "%{B${cBG}}%{F${cGREEN_L}}  %{F${cFG}}%{B${cBG}}"
 }
 
 workspaces() {
@@ -99,19 +99,19 @@ workspaces() {
             # check to see what character I should print for each desktop
             case ${element:1} in
                 I)
-                    wspace="${wspace}    "
+                    wspace="${wspace}  "
                     ;;
                 II)
-                    wspace="${wspace}    "
+                    wspace="${wspace}  "
                     ;;
                 III)
-                    wspace="${wspace}    "
+                    wspace="${wspace}  "
                     ;;
                 IV)
-                    wspace="${wspace}    "
+                    wspace="${wspace}  "
                     ;;
                 V)
-                    wspace="${wspace}    "
+                    wspace="${wspace}  "
                     ;;
                 *) ;;
             esac

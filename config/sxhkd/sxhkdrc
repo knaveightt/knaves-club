@@ -29,6 +29,9 @@ super + ctrl + r
 super + q
 	bspc node -k
 
+super + ctrl + q
+    bspc quit
+
 # w - run window chooser script | W - launch GUI web browser
 super + {_,shift +} w
     {kc-windows,firefox}
@@ -43,7 +46,7 @@ super + {_,shift +} r
 
 # t - run neovim | T - launch GUI mail client
 super + n
-	st -z 22 -e nvim .
+	st -z 20 -e nvim .
 
 # a - run application launcher
 # A - run autoconfigured application sets
@@ -88,7 +91,7 @@ super + shift + {q,z}
 # x - run process killer
 # X - run xkill
 super + x
-    dmenu_run -i -h 28 -p "Execute:"
+    dmenu_run -i -h 20 -p "Execute:"
 
 #super + shift + x
 #	<reserved>

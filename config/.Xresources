@@ -2,49 +2,49 @@
 *.font: Inconsolata Nerd Font:pixelsize=12:antialias=true:autohint=true;
 
 ! Exported from Terminal.Sexy
-! Modified from collection/hybrid by W0ng
+! xcolors.net/Muse with full dark background
 
 ! special
-*.foreground:   #cbc4ba
-*.background:   #211f1d
-*.cursorColor:  #cbc4ba
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
 
 ! black
-*.color0:       #282724
-*.color8:       #3c3b37
+*.color0:       #2e3436
+*.color8:       #555753
 
 ! red
-*.color1:       #a54242
-*.color9:       #cc6666
+*.color1:       #a31604
+*.color9:       #c60001
 
 ! green
-*.color2:       #9f7b2b
-*.color10:      #b5bd68
+*.color2:       #447241
+*.color10:      #27a343
 
 ! yellow
-*.color3:       #de935f
-*.color11:      #f0c674
+*.color3:       #c1951a
+*.color11:      #d5a30e
 
 ! blue
-*.color4:       #5f819d
-*.color12:      #81a2be
+*.color4:       #425387
+*.color12:      #4a5a8d
 
 ! magenta
-*.color5:       #85678f
-*.color13:      #b294bb
+*.color5:       #965d98
+*.color13:      #893c8c
 
 ! cyan
-*.color6:       #638d87
-*.color14:      #8abeb7
+*.color6:       #06989a
+*.color14:      #12bccb
 
 ! white
-*.color7:       #707880
-*.color15:      #c5c8c6
+*.color7:       #d3d7cf
+*.color15:      #eeeeec
 
 ! dmenu items
 !dmenu.font: Inconsolata Nerd Font:pixelsize=12:antialias=true:autohint=true;
 !dmenu.background: #121212
 !dmenu.foreground: #a2a2a2
-dmenu.selbackground: #3c3b37
-dmenu.selforeground: #CC6666
+dmenu.selbackground: #2e3436
+dmenu.selforeground: #06989a
 

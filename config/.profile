@@ -13,6 +13,3 @@ export GOPATH="$GOPATH:/home/knave8/Projects/go"
 
 # Install Ruby Gems to a specified directory:
 export GEM_HOME="$HOME/Shelf/gems"
-
-
-. "$HOME/.cargo/env"
