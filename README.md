@@ -99,7 +99,7 @@ go.
 | Function | Application | Configuration Status | 
 | -------- | ----------- | -------------------- | 
 | Web Browser | firefox | **Complete** |
-| File Explorer | pcmanfm | **Complete** |
+| File Explorer | pcmanfm | **Complete**, uses gvfs, udisks2 |
 | IRC Chat | kvirc | **Complete** |
 | Email Client | thunderbird | Not started |
 
