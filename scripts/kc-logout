@@ -10,7 +10,7 @@ choice=$( echo -e "Shutdown\nRestart\nLogout" | dmenu -i -h 28 -p "You're leavin
 
 case "$choice" in
     "Shutdown")
-        loginctl poweroff
+        sudo /bin/shutdown -P now
         ;;
     "Restart")
         loginctl reboot

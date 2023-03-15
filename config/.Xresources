@@ -1,6 +1,9 @@
 ! Overall Font Definition
 *.font: Inconsolata Nerd Font:pixelsize=12:antialias=true:autohint=true;
 
+! Force Mouse Theme
+Xcursor.theme: Volantes Light Cursors
+
 ! Exported from Terminal.Sexy
 ! xcolors.net/Muse with full dark background
 

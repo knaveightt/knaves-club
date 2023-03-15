@@ -31,7 +31,7 @@ After getting those installed and configured, this is typically the first good
 stage to confirm I am comfortable with my colorscheme choices, and edit my
 Xresources file appropriately. Lastly I'll install my build of
 [dmenu](https://github.com/knaveightt/dmenu-knaveightt-void) before setting up
-the rest of my foundational programs.
+the rest of my foundational programs.  
 
 At this point I now begin to incorporate my bwpwm and sxhkd settings from this
 repository. This does mean downloading of some extra packages that are called
@@ -45,6 +45,7 @@ and my bashrc / profile scripts. To make my scripts work, the following are
 required:
 - xbacklight
 - xtitle
+- nvimpager
 
 Once comfortable with the above, I'll then work on getting my bar setup, as
 well as the system tray. To make my bar work, the following are required:
