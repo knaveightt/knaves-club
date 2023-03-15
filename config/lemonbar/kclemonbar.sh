@@ -96,6 +96,9 @@ workspaces() {
                 underline=true
             fi
 
+            # start the action handler for the desktop
+            wspace="${wspace}%{A:$event_script desktop${element:1}:}"
+
             # check to see what character I should print for each desktop
             case ${element:1} in
                 I)
@@ -115,6 +118,9 @@ workspaces() {
                     ;;
                 *) ;;
             esac
+
+            # end the action handling for this desktop
+            wspace="${wspace}%{A}"
 
             # clean up if the element was underlined
             if [[ $underline == true ]]; then
