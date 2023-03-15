@@ -39,4 +39,6 @@ export GIT_PS1_SHOWCOLORHINTS=1
 #"\n \[${FG_GREEN}\]╰ \[${FG_CYAN}\]\$ \[${FMT_RESET}\]"
 
 PS1='[\u@\h \W]\$ '
-# . "$HOME/.cargo/env"
+
+# forego the above and just use the startship prompt
+eval "$(starship init bash)"

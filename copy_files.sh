@@ -22,6 +22,7 @@ cp ~/.config/lf/cleaner config/lf/
 cp ~/.config/lf/preview config/lf/
 cp ~/.config/weechat/* config/weechat/
 rm config/weechat/sec* # dont copy any secure information over
+cp ~/.config/starship.toml config/
 
 # Copy over related scripts
 cp ~/.local/bin/kc-run scripts/kc-run
