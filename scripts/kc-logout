@@ -5,7 +5,7 @@
 #
 # Depends on elogind
 
-choice=$( echo -e "Shutdown\nRestart\nLogout" | dmenu -i -h $KC_BAR_HEIGHT -p "You're leaving? What would you like to do:" )
+choice=$( echo -e "Shutdown\nRestart\nEnd-X" | dmenu -i -h $KC_BAR_HEIGHT -p "You're leaving? What would you like to do:" )
 
 
 case "$choice" in
@@ -13,10 +13,10 @@ case "$choice" in
         sudo /bin/shutdown -P now
         ;;
     "Restart")
-        loginctl reboot
+        sudo /bin/shutdown -r now
         ;;
-    "Logout")
-        loginctl | egrep -v "root|SESSION|listed" | awk '{print $1}' | xargs loginctl terminate-session
+    "End-X")
+        bspc quit
         ;;
     *)
         ;; # do nothing
