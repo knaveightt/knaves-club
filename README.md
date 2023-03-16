@@ -48,6 +48,7 @@ required:
 - nvimpager
 - neofetch
 - starship (plus use the config file in this repository)
+- Note, you will need to enable users to run /bin/shutdown using sudo w/o passwd
 
 Once comfortable with the above, I'll then work on getting my bar setup, as
 well as the system tray. To make my bar work, the following are required:
