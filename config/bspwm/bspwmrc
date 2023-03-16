@@ -5,6 +5,8 @@
 #############################
 # adjust the prompt for this new graphical session
 export PROMPT_SWITCH=1
+# set the default height for my lemonbar and dmenu calls so they match
+export KC_BAR_HEIGHT=20
 
 
 #############################

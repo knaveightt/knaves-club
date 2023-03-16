@@ -42,7 +42,7 @@ done
 [[ -n "${windows}" ]] || exit
 
 # get a selection, and switch based on user's input
-selection=$(echo -e $windows | dmenu -i -h 28 -p "Open Windows: " -l 10)
+selection=$(echo -e $windows | dmenu -i -h $KC_BAR_HEIGHT -p "Open Windows: " -l 10)
 
 # move to selected window
 bspc node "${selection}" -f

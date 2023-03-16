@@ -4,7 +4,7 @@
 # reload bspwm or sxhkd
 #
 
-choice=$( echo -e "sxhkd\nbspwm" | dmenu -i -h 28 -p "What would you like to reload?" )
+choice=$( echo -e "sxhkd\nbspwm" | dmenu -i -h $KC_BAR_HEIGHT -p "What would you like to reload?" )
 
 
 case "$choice" in

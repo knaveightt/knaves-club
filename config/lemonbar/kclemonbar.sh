@@ -11,7 +11,7 @@
 #############################
 
 # lemonbar options
-set_bar_height=20
+set_bar_height=${KC_BAR_HEIGHT}
 set_bar_font="Inconsolata Nerd Font" # Font used for text
 set_bar_font_size=10
 set_bar_sfont="Symbols Nerd Font" # Font used for symbols (symbols only to 
