@@ -46,6 +46,7 @@ required:
 - xbacklight
 - xtitle
 - nvimpager
+- neofetch
 - starship (plus use the config file in this repository)
 
 Once comfortable with the above, I'll then work on getting my bar setup, as

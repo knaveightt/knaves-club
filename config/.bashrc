@@ -46,6 +46,7 @@ if [ $PROMPT_SWITCH -eq 0 ]
 then
     sleep 1 # I am going to clear the shell on first login
     clear
+    neofetch
 else
     eval "$(starship init bash)"
 fi
