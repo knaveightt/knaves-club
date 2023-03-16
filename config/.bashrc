@@ -40,5 +40,12 @@ export GIT_PS1_SHOWCOLORHINTS=1
 
 PS1='[\u@\h \W]\$ '
 
-# forego the above and just use the startship prompt
-eval "$(starship init bash)"
+# forego the above and just use the startship prompt if PROMPT_SWITCH is set
+# as such
+if [ $PROMPT_SWITCH -eq 0 ]
+then
+    sleep 1 # I am going to clear the shell on first login
+    clear
+else
+    eval "$(starship init bash)"
+fi

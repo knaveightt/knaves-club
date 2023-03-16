@@ -37,3 +37,4 @@ cp ~/.bashrc config/
 cp ~/.bash_profile config/
 cp ~/.Xresources config/
 cp ~/.profile config/
+cp ~/.xinitrc config/
