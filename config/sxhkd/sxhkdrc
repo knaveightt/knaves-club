@@ -25,9 +25,9 @@ super + ctrl + r
 # Foundational Keys (Row 1)    #
 ################################
 
-# q - Kill Node (close window) | Q - <reserved for volume control>
-super + q
-	bspc node -k
+# q - Kill Node (close window) | Q - Kill Node (kill it with fire)
+super + {_,shift +}q
+	bspc node -{c,k}
 
 super + ctrl + q
     bspc quit
@@ -48,12 +48,10 @@ super + {_,shift +} r
 super + n
 	st -z 20 -e nvim .
 
-# a - run application launcher
-# A - run autoconfigured application sets
-super + a
-	xfce4-appfinder
-#super + shift + a
-#	<reserved>
+# a - apply default bspwm layout (tiled) ## will be an audio key in the future
+# A - apply new layout using bsp-layout dmenu script
+super + {_,shift +} a
+    {bsp-layout set tiled,kc-layout}
 
 # s - run scratchpad 1
 # S - run scratchpad 2

@@ -38,6 +38,7 @@ repository. This does mean downloading of some extra packages that are called
 from my bspwm script:
 - dunst
 - nitrogen
+- bsp-layout (get latest from github)
 
 I'll comment out and hold off installing the bar and system tray at the moment.
 To make this work however, I'll also bring in my scripts to the .local/bin folder,
