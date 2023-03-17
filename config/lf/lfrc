@@ -90,6 +90,6 @@ map gD cd ~/Downloads
 map gd cd ~/Documents
 map gm cd ~/Music
 map gp cd ~/Pictures
-map gR cd ~/Prog
+map gR cd ~/Run
 map gP cd ~/Projects
 map gS cd ~/Shelf
