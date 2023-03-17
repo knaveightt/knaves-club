@@ -25,6 +25,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # restore wallpaper
 nitrogen --restore &
 
+# setup the screensaving daemon
+xscreensaver --no-splash &
+
 #############################
 # DESKTOP SETUP             #
 #############################

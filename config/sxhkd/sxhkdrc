@@ -226,5 +226,5 @@ F6
 F7
     kc-brightness -inc 10
 XF86Tools
-    dm-tool lock
+    xscreensaver-command -lock
 

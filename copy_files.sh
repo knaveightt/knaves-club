@@ -38,3 +38,4 @@ cp ~/.bash_profile config/
 cp ~/.Xresources config/
 cp ~/.profile config/
 cp ~/.xinitrc config/
+cp ~/.xscreensaver config/

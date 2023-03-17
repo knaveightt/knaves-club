@@ -64,6 +64,9 @@ and enabled as well as polkit)
 This is also a second good place to make sure I am comfortable with my theme and 
 colors.
 
+Once Here, I'll make sure i am comfortable with power managemnet (via acpi),
+and have a screenlocking mechanism (xscreensaver)
+
 
 *The rest of this section is TBD*
 Still to plan for includes:
@@ -91,6 +94,7 @@ go.
 | Notifications | dunst | Complete |
 | Bar | lemonbar | Complete |
 | System Tray | trayer | Complete |
+| Screen Lock | xscreensaver | Not Started |
 
 #### Terminal Applications
 | Function | Application | Configuration Status |
