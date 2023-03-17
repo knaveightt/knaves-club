@@ -101,7 +101,7 @@ go.
 | -------- | ----------- | -------------------- |
 | File Explorer | lf | Not started |
 | IRC | weechat | Not Started |
-| Process Viewer | htop | Complete |
+| Email | neomutt | Not Started |
 
 #### GUI Applications (for launching via hotkeys)
 | Function | Application | Configuration Status | 

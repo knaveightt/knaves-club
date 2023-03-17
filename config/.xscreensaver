@@ -1,11 +1,11 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-settings 6.06 for knave8 on Fri Mar 17 11:43:36 2023.
+# Written by xscreensaver-settings 6.06 for knave8 on Fri Mar 17 12:07:52 2023.
 # https://www.jwz.org/xscreensaver/
 
-timeout:	0:10:00
-cycle:		0:10:00
+timeout:	0:05:00
+cycle:		0:06:00
 lock:		True
-lockTimeout:	0:15:00
+lockTimeout:	0:10:00
 passwdTimeout:	0:00:30
 visualID:	default
 installColormap:    True
@@ -37,7 +37,7 @@ textFile:
 textProgram:	fortune
 textURL:	https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
 dialogTheme:	darkgray
-settingsGeom:	10,30 -1,-1
+settingsGeom:	8,28 -1,-1
 
 programs:								      \
 				maze --root				    \n\
