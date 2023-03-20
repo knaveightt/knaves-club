@@ -12,6 +12,9 @@ export KC_BAR_HEIGHT=20
 #############################
 # AUTOSTARTS                #
 #############################
+# load xmodmap that switches Super_L and Control_L keys
+# for my laptop for a better emacs experience
+xmodmap ~/.xmodmap
 
 # Kill XFCE4 Notifications Daemon (if active) and start dunst
 dunst &
