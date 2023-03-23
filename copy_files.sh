@@ -39,3 +39,6 @@ cp ~/.Xresources config/
 cp ~/.profile config/
 cp ~/.xinitrc config/
 cp ~/.xscreensaver config/
+
+# service related items
+cp -r ~/.local/emacs service/
