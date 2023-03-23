@@ -1,9 +1,0 @@
-!
-! Swap Super_L and Control_L to make the emacs experience better
-!
-remove mod4 = Super_L
-remove Control = Control_L
-keysym Control_L = Super_L
-keysym Super_L = Control_L
-add mod4 = Super_L
-add Control = Control_L
