@@ -46,7 +46,7 @@ super + {_,shift +} r
 
 # t - run neovim | T - launch GUI mail client
 super + n
-	emacsclient -nc
+  st -z 20 -e nvim
 
 # a - apply default bspwm layout (tiled) ## will be an audio key in the future
 # A - apply new layout using bsp-layout dmenu script

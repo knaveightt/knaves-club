@@ -12,10 +12,6 @@ export KC_BAR_HEIGHT=20
 #############################
 # AUTOSTARTS                #
 #############################
-# start the user services (specifically to start the emacs daemon
-# as a service)
-runsvdir -P "${HOME}/.local/service/" &
-
 # Kill XFCE4 Notifications Daemon (if active) and start dunst
 dunst &
 
