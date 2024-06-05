@@ -173,3 +173,10 @@ Also, there are things I will want to remember to document in this repo:
 This is where the dependency is for the git prompt in bash:
 - [https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
 - [https://gist.github.com/justintv/168835](https://gist.github.com/justintv/168835)
+- 
+
+These links helped me to get sound working on my chromebook:
+- https://www.reddit.com/r/chrultrabook/comments/uc0b6i/howto_audio_on_apollolake_devices_under_linux/
+- https://www.reddit.com/r/voidlinux/comments/y6xtb6/sound_not_working_in_void_linux/
+- https://www.reddit.com/r/voidlinux/comments/s96z6t/problems_with_pipewire/
+- These along with the void linux manual documentation on sound
